@@ -111,6 +111,6 @@ def geohash_length_for_error(radius):
     """For a given distance radius in km, return the number of characters
     that a geohash should be trimmed to, ensuring that the resulting
     geohash completely covers the requested radius."""
-    for geohash_length, error in GEOHASH_ERROR_SIZES.items():
+    for geohash_length, error in list(GEOHASH_ERROR_SIZES.items()):
         if error < radius:
             return geohash_length - 1

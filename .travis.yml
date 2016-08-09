@@ -3,19 +3,15 @@ language: python
 sudo: false
 
 env:
-  - TOX_ENV=py26-django13
-  - TOX_ENV=py26-django14
-  - TOX_ENV=py26-django15
-  - TOX_ENV=py26-django16
-  - TOX_ENV=py27-django13
-  - TOX_ENV=py27-django14
-  - TOX_ENV=py27-django15
-  - TOX_ENV=py27-django16
   - TOX_ENV=py27-django17
   - TOX_ENV=py27-django18
+  - TOX_ENV=py27-django19
+  - TOX_ENV=py35-django17
+  - TOX_ENV=py35-django18
+  - TOX_ENV=py35-django19
 
 install:
-  - pip install tox
+  - pip3 install tox
 
 script:
   - tox -e $TOX_ENV

@@ -23,7 +23,7 @@ class GeoQuerySet(models.query.QuerySet):
         """Override filter to support custom lookups"""
 
         filters = None
-        for key in kwargs.keys():
+        for key in list(kwargs.keys()):
             if not key.endswith((APPROX_DISTANCE_POSTFIX, EXACT_DISTANCE_POSTFIX)):
                 continue
 
