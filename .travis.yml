@@ -1,6 +1,12 @@
 language: python
 
-sudo: false
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
 
 env:
   - TOX_ENV=py27-django17
@@ -11,7 +17,7 @@ env:
   - TOX_ENV=py35-django19
 
 install:
-  - pip3 install tox
+  - pip install tox
 
 script:
   - tox -e $TOX_ENV
