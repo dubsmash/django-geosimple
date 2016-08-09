@@ -2,7 +2,9 @@ from django.db import models
 from geosimple.utils import Geohash, convert_to_point
 
 
-class GeohashField(models.CharField, metaclass=models.SubfieldBase):
+class GeohashField(models.CharField):
+
+    __metaclass__ = models.SubfieldBase
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 12
