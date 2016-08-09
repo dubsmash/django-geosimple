@@ -1,4 +1,4 @@
-django-geosimple [![travis][travis-image]][travis-url] [![pypi][pypi-image]][pypi-url]
+django-geosimple [![travis][travis-image]][travis-url]
 ===================================
 > Basic geospatial helpers for Django
 
@@ -130,8 +130,5 @@ If you've already filtered the points by distance, you don't need to supply the 
 If either of the in-memory filtering or sorting methods are used, each item in the queryset will be annotated with the distance from the given point. The property used is the name of the field with `_distance` appended. So, in the example above, the property will be named `location_distance`. This will be a `geopy.Distance` instance. You can force these annotations to be added by calling `with_distance_annotations`, passing a location.
 
 
-[travis-image]: https://travis-ci.org/dabapps/django-geosimple.svg?branch=master
-[travis-url]: https://travis-ci.org/dabapps/django-geosimple
-
-[pypi-image]: https://badge.fury.io/py/django-geosimple.svg
-[pypi-url]: https://pypi.python.org/pypi/django-geosimple/
+[travis-image]: https://travis-ci.org/dubsmash/django-geosimple.svg?branch=master
+[travis-url]: https://travis-ci.org/dubsmash/django-geosimple
